@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int minStartValue(vector<int>& nums) {
+
+        int minprefix=INT_MAX;
+        int sum=0;
+        for(int a:nums){
+            sum+=a;
+            minprefix=min(minprefix,sum);
+        }
+        if(minprefix<0)
+        return 1-minprefix;
+        else
+        return 1;
+    }
+};
